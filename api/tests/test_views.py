@@ -4,8 +4,9 @@ from api.models import Book
 from datetime import date
 from django.urls import reverse
 
-# TEST 1
+
 class BookViewTest(APITestCase):
+    # TEST 1: List books
     def test_list_books(self):
         # Create a test book in the temporary test db
         book = Book.objects.create(
@@ -21,7 +22,27 @@ class BookViewTest(APITestCase):
         assert response.status_code == status.HTTP_200_OK
         body = response.json()
         returned_book = body[0]
-        assert returned_book["title"] == book.title
-        assert returned_book["author"] == book.author
-        assert returned_book["isbn"] == book.isbn
-        assert returned_book["published_date"] == str(book.published_date)
+        assert returned_book == {
+            "title": book.title,
+            "author": book.author,
+            "isbn": book.isbn,
+            "published_date": str(book.published_date)
+        }
+
+    # TEST 2: Create a book 
+    def test_create_book(self):
+        data = {
+            "title": "Created Book",
+            "author": "Created Author",
+            "isbn": "1234567890123",
+            "published_date": "2025-01-01"
+        }
+        url = reverse('api:books')
+        response = self.client.post(url, data, format='json')
+
+        assert response.status_code == status.HTTP_201_CREATED
+        body = response.json()
+        for field in data:
+            assert body[field] == data[field]
+        
+
