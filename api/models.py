@@ -24,7 +24,8 @@ class Book(models.Model):
         max_length=20,
         choices=[
             ('available', 'Available'), 
-            ('archived', 'Archived')
+            ('archived', 'Archived'),
+            ('checked_out', 'Checked out'),
         ],
         default='available' # Default value when creating a new book
     )
