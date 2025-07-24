@@ -84,3 +84,35 @@ class BookViewTest(APITestCase):
             "created_at": returned_book["created_at"],
             "updated_at": returned_book["updated_at"]
         }
+
+    # TEST 4: Update a book by ID
+    def test_update_book(self):
+        # Create an original book
+        book = Book.objects.create(
+            title="Original Book",
+            author="Original Author",
+            isbn="1234567890123",
+            published_date=date(2025, 1, 1),
+            status="available"
+        )
+
+        # Prepare the updated data
+        updated_data= {
+            "title": "Updated Book",
+            "author":"Updated Author",
+            "isbn": "1234567890123",
+            "published_date": "2025-01-01",
+            "status": "checked_out"
+        }
+
+        # Send PUT request to the detail endpoint
+        url = reverse('api:book-detail', args=[book.id])
+        response = self.client.put(url, updated_data, format='json')
+
+        # Assert correct response and values updated
+        assert response.status_code == status.HTTP_200_OK
+        body = response.json()
+        returned_book = body
+
+        for key in updated_data:
+            assert returned_book[key] == updated_data[key]
