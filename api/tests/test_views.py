@@ -153,6 +153,43 @@ class BookViewTest(APITestCase):
         assert response.status_code == status.HTTP_400_BAD_REQUEST
 
         # Check error fields returned
-        returned_book = response.json()
-        assert "title" in returned_book
-        assert "isbn" in returned_book
+        error_response = response.json()
+        assert "title" in error_response
+        assert "isbn" in error_response
+    
+    # TEST 7: Retrieve a book that doesn't exist (404)
+    def test_retrieve_nonexistent_book_return_404(self):
+        url = reverse('api:book-detail', args=[9999])
+        response = self.client.get(url)
+
+        assert response.status_code == status.HTTP_404_NOT_FOUND
+
+    # TEST 8: Update a book with invalid status
+    def test_update_book_with_invalid_status(self):
+        # Create a valid book
+        book = Book.objects.create(
+            title="Invalid status Book",
+            author="Invalid status Author",
+            isbn="1234567890123",
+            published_date=date(2025, 1, 1),
+            status="available"
+        )
+
+        # Prepare data with invalid status
+        invalid_data = {
+            "title": "Updated Book",
+            "author": "Updated Author",
+            "isbn": "1234567890123",
+            "published_date": "2025-01-01",
+            "status": "invalid" # not in status
+        }
+
+        # Send PUT request
+        url = reverse('api:book-detail', args=[book.id])
+        response = self.client.put(url, invalid_data, format='json')
+
+        # Assert 400 bad request
+        assert response.status_code == status.HTTP_400_BAD_REQUEST
+
+        error_response = response.json()
+        assert "status" in error_response
