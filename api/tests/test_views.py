@@ -47,8 +47,7 @@ class BookViewTest(APITestCase):
         response = self.client.post(url, data, format='json')
 
         assert response.status_code == status.HTTP_201_CREATED
-        body = response.json()
-        returned_book = body
+        returned_book = response.json()
 
         # Check all submitted fields
         for field in data:
@@ -72,8 +71,7 @@ class BookViewTest(APITestCase):
         response = self.client.get(url, format='json')
 
         assert response.status_code == status.HTTP_200_OK
-        body = response.json()
-        returned_book = body
+        returned_book = response.json()
 
         assert returned_book == {
             "title": book.title,
@@ -111,8 +109,7 @@ class BookViewTest(APITestCase):
 
         # Assert correct response and values updated
         assert response.status_code == status.HTTP_200_OK
-        body = response.json()
-        returned_book = body
+        returned_book = response.json()
 
         for key in updated_data:
             assert returned_book[key] == updated_data[key]
@@ -138,4 +135,24 @@ class BookViewTest(APITestCase):
         # Confirm book no longer exists
         exists = Book.objects.filter(id=book.id).exists()
         assert exists is False
-        
+    
+    # TEST 6: Creating a book with invalid data to check the serializer logic
+    def test_create_book_with_invalid_data(self):
+        # Missing title and isbn is too short - invalid
+        invalid_data = {
+            "author": "Invalid Author",
+            "isbn": "123",
+            "published_date": "2025-01-01",
+            "status": "available"
+        }
+
+        url = reverse('api:books')
+        response = self.client.post(url, invalid_data, format='json')
+
+        # Assert 400 bad request
+        assert response.status_code == status.HTTP_400_BAD_REQUEST
+
+        # Check error fields returned
+        returned_book = response.json()
+        assert "title" in returned_book
+        assert "isbn" in returned_book
