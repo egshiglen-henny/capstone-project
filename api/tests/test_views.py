@@ -116,3 +116,26 @@ class BookViewTest(APITestCase):
 
         for key in updated_data:
             assert returned_book[key] == updated_data[key]
+        
+    # TEST 5: Delete a book by ID
+    def test_delete_book(self):
+        # Create a book to delete
+        book = Book.objects.create(
+            title="Delete Book",
+            author="Delete Author",
+            isbn="1234567890123",
+            published_date=date(2025, 1, 1),
+            status="available"
+        )
+
+        # Send DELETE request to the detail endpoint
+        url = reverse('api:book-detail', args=[book.id])
+        response = self.client.delete(url)
+
+        # Assert response is 204 no content
+        assert response.status_code == status.HTTP_204_NO_CONTENT
+
+        # Confirm book no longer exists
+        exists = Book.objects.filter(id=book.id).exists()
+        assert exists is False
+        
