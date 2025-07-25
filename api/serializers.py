@@ -7,6 +7,7 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         # Expose all the fields in the API
         fields =[
+            'id',
             'title', 
             'author', 
             'isbn', 

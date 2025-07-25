@@ -25,6 +25,7 @@ class BookViewTest(APITestCase):
 
         # Check required fields
         assert returned_book == {
+            "id": book.id,
             "title": book.title,
             "author": book.author,
             "isbn": book.isbn,
@@ -74,6 +75,7 @@ class BookViewTest(APITestCase):
         returned_book = response.json()
 
         assert returned_book == {
+            "id": book.id,
             "title": book.title,
             "author": book.author,
             "isbn": book.isbn,

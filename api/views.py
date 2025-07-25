@@ -28,7 +28,9 @@ class BookView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         # If the data is invalid, return 400 with validation errors
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
 book_view = BookView.as_view()
+
 class BookDetailView(APIView):
     # Retrieve, update or delete a book by ID
     # Handle a single book
