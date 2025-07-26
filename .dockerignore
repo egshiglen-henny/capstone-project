@@ -1,0 +1,38 @@
+# Git and VCS
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[codz]
+*$py.class
+
+# Virtual env
+.venv
+
+# Environment/config
+.env
+db.sqlite3
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build/test artifacts
+*.log
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+htmlcov/
+coverage.xml
+.cache/
+
+# Misc
+.DS_Store
+Thumbs.db
