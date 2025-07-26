@@ -12,12 +12,16 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y gcc libpq-dev && apt-get clean
+RUN apt-get update && \
+apt-get install -y gcc libpq-dev && \
+apt-get install -y netcat-traditional &&\
+apt-get clean
 
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && \
+    rm -rf /var/lib/apt/lists
 
 # Copy Django project files into container
 COPY . .
@@ -26,4 +30,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT [ "/app/entrypoint.sh" ]
