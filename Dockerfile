@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # Label to specify the source repository for this image (used by GitHub Container Registry)
-LABEL org.opencontainers.image.source https:/github.com/egshiglen2024359/capstone-project
+LABEL org.opencontainers.image.source=https://github.com/egshiglen2024359/capstone-project
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
