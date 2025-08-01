@@ -6,6 +6,13 @@ from rest_framework import status
 from .serializers import BookSerializer
 from .models import Book
 
+class HealthView(APIView):
+    def get(self, request, *args, **kwargs):
+        return Response(
+            {"status": "ok"}
+        )
+health_view = HealthView.as_view()
+
 class BookView(APIView):
     # List all books, or create a new book
     
