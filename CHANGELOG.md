@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.1.0...v1.2.0) (2025-08-01)
+
+### Features
+
+* **ci:** test semantic release workflow ([ea4bd08](https://github.com/egshiglen2024359/capstone-project/commit/ea4bd089e55ba3321790d99f29a39a14ba5ac31f))
+
 ## [1.1.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.0.0...v1.1.0) (2025-08-01)
 
 ### Features
