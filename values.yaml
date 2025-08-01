@@ -1,0 +1,9 @@
+auth:
+  postgresPassword: "books" # superuser
+  username: "books" # normal user
+  password: "books" # password for books user
+  database: "books" # database name
+primary:
+  persistence:
+    enabled: true
+    size: 8Gi

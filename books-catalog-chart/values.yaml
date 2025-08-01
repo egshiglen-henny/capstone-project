@@ -1,0 +1,47 @@
+# Default values for books-catalog-chart
+
+# This will set the replicaset count
+replicaCount: 1
+
+# This sets the container image
+image:
+  repository: ghcr.io/egshiglen2024359/capstone-project # my image
+  # This sets the pull policy for images.
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion
+  tag: "main"
+
+# This is for the secrets for pulling an image from a private repository
+imagePullSecrets:
+  - name: ghcr-token
+# This is to override the chart name
+nameOverride: ""
+fullnameOverride: ""
+
+apiContainerPort: 8000
+
+# This block is for setting up the ingress
+ingress:
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+loadSecretFrom: books-database-postgresql
+environmentVariables:
+  - name: DATABASE_NAME
+    value: books
+  - name: DATABASE_USER
+    value: books
+  - name: DATABASE_HOST
+    value: books-database-postgresql
+    # value: books-database-postgresql-0.books-database-postgresql-hl.default.svc.cluster.local
+          #  name of the postrgesql pod. name of the headless server
+  - name: DEVELOPMENT_MODE
+    value: "false"
