@@ -37,6 +37,6 @@ spec:
               protocol: TCP
           readinessProbe:
             httpGet:
-              path: /api/ # Replace with the endpoint to your health 
+              path: /api/health/
               port: http
                 
