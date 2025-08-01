@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.0.0...v1.1.0) (2025-08-01)
+
+### Features
+
+* **ci:** trigger new release for testing ([4d99e94](https://github.com/egshiglen2024359/capstone-project/commit/4d99e941436d7d92f84d4545d46390e163ed2536))
+
 ## 1.0.0 (2025-08-01)
 
 ### Features
