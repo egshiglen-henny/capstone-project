@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.2.0...v1.3.0) (2025-08-06)
+
+### Features
+
+* **ci:** verify full CI/CD pipeline with semantic-release and docker build ([bac4085](https://github.com/egshiglen2024359/capstone-project/commit/bac40852fb24fe383b2e1484cd4a43f49c2d23f8))
+
 ## [1.2.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.1.0...v1.2.0) (2025-08-01)
 
 ### Features
