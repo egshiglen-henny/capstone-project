@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.3.1...v1.4.0) (2025-08-06)
+
+### Features
+
+* **helm:** add ingress config and update persistence for ArgoCD ([3dde1de](https://github.com/egshiglen2024359/capstone-project/commit/3dde1def5a2412f7257b4a841f5e60098af0b8a3))
+
 ## [1.3.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.3.0...v1.3.1) (2025-08-06)
 
 ### Bug Fixes
