@@ -7,3 +7,18 @@ primary:
   persistence:
     enabled: true
     size: 8Gi
+
+server:
+  ingress:
+    enabled: true
+    path: /argocd
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "false"
+
+configs:
+  params:
+    server.insecure: true
+    server.basehref: /argocd
+    server.rootpath: '/argocd'
+global:
+  domain: ""
