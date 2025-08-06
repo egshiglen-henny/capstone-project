@@ -51,8 +51,8 @@ jobs:
       - migrations-check
     if: github.ref == 'refs/heads/main'
     outputs:
-      new-release-published: ${{ steps.semantic.outputs.released }}
-      new-release-version: ${{ steps.semantic.outputs.version }}
+      new-release-published: ${{ steps.semantic.outputs.new_release_published }}
+      new-release-version: ${{ steps.semantic.outputs.new_release_version }}
     permissions:
       contents: write
       issues: write
@@ -87,6 +87,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+      attestations: write
+      id-token: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
