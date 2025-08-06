@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.3.0...v1.3.1) (2025-08-06)
+
+### Bug Fixes
+
+* **ci:** correct semantic-release output variable names to enable Docker build job ([3c9df2f](https://github.com/egshiglen2024359/capstone-project/commit/3c9df2fc09c7eafdb0aec979fc4125e3dc10e7da))
+
 ## [1.3.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.2.0...v1.3.0) (2025-08-06)
 
 ### Features
