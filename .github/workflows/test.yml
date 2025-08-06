@@ -76,6 +76,7 @@ jobs:
             @semantic-release/github
             conventional-changelog-conventionalcommits
         env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
   build-docker-image:
