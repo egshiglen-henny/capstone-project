@@ -1,3 +1,4 @@
 image:
   repository: ghcr.io/egshiglen2024359/capstone-project
   tag: "1.4.2"
+  pullPolicy: Always
