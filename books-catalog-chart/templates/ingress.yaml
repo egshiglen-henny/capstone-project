@@ -9,7 +9,9 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
+  ingressClassName: {{ .Values.ingress.className | default "traefik" }}
   rules:
+    - host: {{ .Values.ingress.host | quote }}
     - http:
       paths:
         - path: /api

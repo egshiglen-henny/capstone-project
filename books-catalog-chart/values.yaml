@@ -22,6 +22,9 @@ apiContainerPort: 8000
 
 # This block is for setting up the ingress
 ingress:
+  enabled: true
+  className: traefik
+  host: localhost
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 
