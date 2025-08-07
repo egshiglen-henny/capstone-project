@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.5.0...v1.5.1) (2025-08-07)
+
+### Bug Fixes
+
+* **helm:** update ingress host to books.local for local access ([37a057a](https://github.com/egshiglen2024359/capstone-project/commit/37a057a220264c3cb58df82830fa6f25f5a7849a))
+
 ## [1.5.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.3...v1.5.0) (2025-08-07)
 
 ### Features
