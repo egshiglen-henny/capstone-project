@@ -76,3 +76,10 @@ class BookDetailView(APIView):
         # Return 204 no content to confirm the deletion
         return Response(status=status.HTTP_204_NO_CONTENT)
 book_detail_view = BookDetailView.as_view()
+
+class TestView(APIView):
+    def get(self, request, *args, **kwargs):
+        return Response({
+            "test": "ok"
+        })
+test_view = TestView.as_view()
