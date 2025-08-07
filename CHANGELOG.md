@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.0...v1.4.1) (2025-08-07)
+
+### Bug Fixes
+
+* **ingress:** add host field to fix ArgoCD OutOfSync issue ([c6d5c41](https://github.com/egshiglen2024359/capstone-project/commit/c6d5c4120e1479b225e040a2f5d2906ed4ea98c9))
+
 ## [1.4.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.3.1...v1.4.0) (2025-08-06)
 
 ### Features
