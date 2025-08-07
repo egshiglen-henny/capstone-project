@@ -1,3 +1,9 @@
+## [1.4.2](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.1...v1.4.2) (2025-08-07)
+
+### Bug Fixes
+
+* **ingress:** correct Ingress rule structure to resolve ArgoCD OutOfSync issue ([461bb0e](https://github.com/egshiglen2024359/capstone-project/commit/461bb0e5e25e839b337026267e9aa90e6650443d))
+
 ## [1.4.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.0...v1.4.1) (2025-08-07)
 
 ### Bug Fixes
