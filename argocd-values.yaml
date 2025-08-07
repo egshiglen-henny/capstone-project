@@ -1,0 +1,17 @@
+server:
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    path: /argocd
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/rewrite-target: /$1
+
+configs:
+  params:
+    server.insecure: true
+    server.basehref: /argocd
+    server.rootpath: '/argocd'
+
+global:
+  domain: ""
