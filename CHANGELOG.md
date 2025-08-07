@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.3...v1.5.0) (2025-08-07)
+
+### Features
+
+* Adding new deployment job on workflow and testing ([cf3db76](https://github.com/egshiglen2024359/capstone-project/commit/cf3db76b3fe8a70858d5f36c253a558f0fd5490d))
+
 ## [1.4.3](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.2...v1.4.3) (2025-08-07)
 
 ### Bug Fixes
