@@ -1,3 +1,9 @@
+## [1.4.3](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.2...v1.4.3) (2025-08-07)
+
+### Bug Fixes
+
+* **helm:** set image tag to 1.4.2 for production [skip ci] ([5ccc69b](https://github.com/egshiglen2024359/capstone-project/commit/5ccc69b1d8bf3036436cf07c88c69995b8927241))
+
 ## [1.4.2](https://github.com/egshiglen2024359/capstone-project/compare/v1.4.1...v1.4.2) (2025-08-07)
 
 ### Bug Fixes
