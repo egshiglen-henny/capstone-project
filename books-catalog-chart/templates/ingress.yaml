@@ -21,3 +21,11 @@ spec:
                 name: {{ include "books-catalog-chart.fullname" $ }}
                 port:
                   number: 80
+          # optional
+          - path: /media
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "books-catalog-chart.fullname" $ }}
+                port:
+                  number: 80
