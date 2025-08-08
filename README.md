@@ -21,7 +21,8 @@ I also learned how to:
   - Title, Author, ISBN, Published Date, Status
   - Full CRUD API
   - Validation to stop bad data
-
+- Demo Video: `https://drive.google.com/file/d/1NxA__cKcy-rY1JbEnpt1PRFRszDmJ6wI/view?usp=sharing`
+  Go to the link above to see how the deployment and application works in real action. 
 ---
 
 ## 2. API Usage Examples
