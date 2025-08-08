@@ -9,7 +9,7 @@ image:
   # This sets the pull policy for images.
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion
-  tag: "1.4.2"
+  tag: "main"
 
 # This is for the secrets for pulling an image from a private repository
 imagePullSecrets:
@@ -24,7 +24,7 @@ apiContainerPort: 8000
 ingress:
   enabled: true
   className: traefik
-  host: books.local
+  host: localhost
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 
