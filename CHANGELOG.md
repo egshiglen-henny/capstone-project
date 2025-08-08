@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.5.2...v1.6.0) (2025-08-08)
+
+### Features
+
+* **api:** add serializer validations and test for future published_date  ([9b2854a](https://github.com/egshiglen2024359/capstone-project/commit/9b2854acf3f20b88789ef3f326f53f8c2d4f5cd9))
+* **serializer:** add ISBN and published_date validation with text trimming ([ced8937](https://github.com/egshiglen2024359/capstone-project/commit/ced893792598b1a1197c97a8333d0f728c67324c))
+
 ## [1.5.2](https://github.com/egshiglen2024359/capstone-project/compare/v1.5.1...v1.5.2) (2025-08-08)
 
 ### Bug Fixes
