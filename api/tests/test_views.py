@@ -195,6 +195,23 @@ class BookViewTest(APITestCase):
 
         error_response = response.json()
         assert "status" in error_response
+    
+    # TEST 9: Create a book with future date
+    def test_create_book_with_future_date(self):
+        future_data = {
+            "title": "Future Book",
+            "author": "Future Author",
+            "isbn": "1234567890123",
+            "published_date": "3999-01-01",
+            "status": "available"
+        }
+        url = reverse('api:books')
+        response = self.client.post(url, future_data, format='json')
+
+        assert response.status_code == status.HTTP_400_BAD_REQUEST
+        error_response = response.json()
+        assert "published_date" in error_response
+
 
 # TEST: Health view
 class HealthViewTest(APITestCase):
