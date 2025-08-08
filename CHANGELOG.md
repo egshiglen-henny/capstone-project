@@ -1,3 +1,9 @@
+## [1.6.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.6.0...v1.6.1) (2025-08-08)
+
+### Bug Fixes
+
+* **ingress:** correct path configuration for application routing ([9c1a6a6](https://github.com/egshiglen2024359/capstone-project/commit/9c1a6a6631bb0453421d9274af2bced114111184))
+
 ## [1.6.0](https://github.com/egshiglen2024359/capstone-project/compare/v1.5.2...v1.6.0) (2025-08-08)
 
 ### Features
