@@ -24,7 +24,7 @@ apiContainerPort: 8000
 ingress:
   enabled: true
   className: traefik
-  host: books.local
+  host: localhost
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 
