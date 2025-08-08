@@ -1,3 +1,9 @@
+## [1.6.3](https://github.com/egshiglen2024359/capstone-project/compare/v1.6.2...v1.6.3) (2025-08-08)
+
+### Bug Fixes
+
+* **ingress:** route /static to app so DRF assets load via Ingress ([f7e0e85](https://github.com/egshiglen2024359/capstone-project/commit/f7e0e85123a36b6cb294efd6a1f81203daffb75f))
+
 ## [1.6.2](https://github.com/egshiglen2024359/capstone-project/compare/v1.6.1...v1.6.2) (2025-08-08)
 
 ### Bug Fixes
