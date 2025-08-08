@@ -18,6 +18,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "books-catalog-chart.fullname" . }}
+                name: {{ include "books-catalog-chart.fullname" $ }}
                 port:
                   number: 80
