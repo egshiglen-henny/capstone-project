@@ -1,3 +1,9 @@
+## [1.6.4](https://github.com/egshiglen2024359/capstone-project/compare/v1.6.3...v1.6.4) (2025-08-08)
+
+### Bug Fixes
+
+* **deployment:** bump image tag to trigger production rollout ([1f20386](https://github.com/egshiglen2024359/capstone-project/commit/1f20386b062f2b68baf20f9b0c54dda09aae70a9))
+
 ## [1.6.3](https://github.com/egshiglen2024359/capstone-project/compare/v1.6.2...v1.6.3) (2025-08-08)
 
 ### Bug Fixes
