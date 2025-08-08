@@ -1,3 +1,11 @@
+## [1.5.2](https://github.com/egshiglen2024359/capstone-project/compare/v1.5.1...v1.5.2) (2025-08-08)
+
+### Bug Fixes
+
+* **helm:** change books.local to localhost on values.yaml and app version to 1.16.0 on chart ([8742a77](https://github.com/egshiglen2024359/capstone-project/commit/8742a773b3bec6f3f67cf9c30dddedead589d3ca))
+* **helm:** change books.local to localhost on values.yaml and app version to 1.16.0 on chart ([9d481df](https://github.com/egshiglen2024359/capstone-project/commit/9d481dff61834052c39c59dc031cc35dc713fa2a))
+* **helm:** change books.local to localhost on values.yaml and app version to 1.16.0 on chart ([5ecedb1](https://github.com/egshiglen2024359/capstone-project/commit/5ecedb13a196da4ef05f14150ecb9132c6cd1369))
+
 ## [1.5.1](https://github.com/egshiglen2024359/capstone-project/compare/v1.5.0...v1.5.1) (2025-08-07)
 
 ### Bug Fixes
