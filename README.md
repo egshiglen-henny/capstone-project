@@ -18,7 +18,9 @@ This project demonstrates my full DevOps workflow — from **local Docker develo
 - CI/CD pipeline with **GitHub Actions** → **GHCR** → **Kubernetes (Helm)**  
 - Automated GitOps sync using **Argo CD**  
 
-🎥 **Demo Video:** [Watch Here](https://drive.google.com/file/d/1NxA__cKcy-rY1JbEnpt1PRFRszDmJ6wI/view?usp=sharing)
+[![Watch the Demo](https://img.shields.io/badge/🎥_Watch_Demo-Drive-purple?style=for-the-badge&logo=google-drive)](https://drive.google.com/file/d/1NxA__cKcy-rY1JbEnpt1PRFRszDmJ6wI/view?usp=sharing)
+
+
 
 ---
 
