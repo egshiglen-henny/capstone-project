@@ -1,28 +1,51 @@
-# Books Catalog API – Capstone Project
+# 📚 Books Catalog API — Capstone Project
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Framework](https://img.shields.io/badge/Framework-Django%20REST%20Framework-green)
+![Database](https://img.shields.io/badge/Database-PostgreSQL-blue)
+![Build](https://img.shields.io/badge/Build-Docker%20%7C%20Helm%20%7C%20ArgoCD-purple)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-This is my final project for the **DevOps Diploma 2025**.  
-It’s a **Django REST API** for keeping track of books. I built it so you can **add**, **view**, **edit**, and **delete** books.  
+A **Django REST API** built as part of my **DevOps Diploma 2025**.  
+This project demonstrates my full DevOps workflow — from **local Docker development** to **automated CI/CD and GitOps deployment** on Kubernetes using **Helm**, **GitHub Actions**, and **Argo CD**.
 
-I also learned how to:  
-- Put the app inside a **Docker container**  
-- Run it with **docker-compose** for local development  
-- Deploy it to **Kubernetes** with **Helm**  
-- Automate everything with **GitHub Actions** so changes go live without me manually redeploying
-- Keep my cluster in sync with my GitHub repo using **Argo CD** 
+---
+
+## ✨ Features
+- CRUD operations for managing books (Add, View, Edit, Delete)  
+- REST API endpoints with input validation  
+- PostgreSQL database integration  
+- Containerized using **Docker** and **docker-compose**  
+- CI/CD pipeline with **GitHub Actions** → **GHCR** → **Kubernetes (Helm)**  
+- Automated GitOps sync using **Argo CD**  
+
+🎥 **Demo Video:** [Watch Here](https://drive.google.com/file/d/1NxA__cKcy-rY1JbEnpt1PRFRszDmJ6wI/view?usp=sharing)
+
+---
+
+## 🧩 Tech Stack
+
+| Tool | Purpose |
+|------|----------|
+| **Python 3.12** | Backend programming |
+| **Django REST Framework** | API framework |
+| **PostgreSQL** | Relational database |
+| **Docker / Docker Compose** | Containerization |
+| **Helm** | Kubernetes deployment |
+| **Argo CD** | GitOps automation |
+| **GitHub Actions** | CI/CD automation |
+| **GHCR (GitHub Container Registry)** | Image hosting |
 
 ---
 
 ## 1. Project Overview
-- Framework: **Django REST Framework**  
-- Database: **PostgreSQL**  
-- Deployment: **Helm on Kubernetes**  
-- CI/CD: **GitHub Actions** → **GitHub Container Registry** → **K8s**  
-- Main features:
+- **Framework:** Django REST Framework  
+- **Database:** PostgreSQL  
+- **Deployment:** Helm on Kubernetes  
+- **CI/CD:** GitHub Actions → GHCR → K8s  
+- **Main Features:**
   - Title, Author, ISBN, Published Date, Status
-  - Full CRUD API
-  - Validation to stop bad data
-- Demo Video: `https://drive.google.com/file/d/1NxA__cKcy-rY1JbEnpt1PRFRszDmJ6wI/view?usp=sharing`
-  Go to the link above to see how the deployment and application works in real action. 
+  - Full CRUD API with validation
+
 ---
 
 ## 2. API Usage Examples
@@ -188,3 +211,13 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 - **Remove image tag override**
 
 Once synced, Argo CD will watch this repo and keep Kubernetes deployment up to date automatically with the latest image tag.
+
+## 📘 Summary
+This project showcases **end-to-end DevOps delivery**:
+Code → Test → Build → Version → Deploy → Sync → Monitor
+
+
+## 👩‍💻 Author
+**Egshiglen Enkhbayar**  
+📍 Dublin, Ireland  
+🔗 [GitHub](https://github.com/egshiglen-henny) | [LinkedIn](https://linkedin.com/in/egshiglene)
